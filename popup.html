@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blind Navigator Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      min-width: 200px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1a73e8;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    select, input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blind Navigator</h1>
+
+  <!-- Voice Selection -->
+  <label for="voice-select">Select Voice:</label>
+  <select id="voice-select">
+    <option value="default">Default</option>
+  </select>
+
+  <!-- Speech Speed -->
+  <label for="speed-range">Speech Speed:</label>
+  <input type="range" id="speed-range" min="0.5" max="2" step="0.1" value="1">
+  <span id="speed-value">1.0</span>
+
+  <!-- Toggle Highlighting -->
+  <label for="highlight-toggle">Enable Focus Highlighting:</label>
+  <input type="checkbox" id="highlight-toggle">
+
+  <!-- Save Button -->
+  <button id="save-button">Save Settings</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
